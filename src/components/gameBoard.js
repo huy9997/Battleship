@@ -2,13 +2,11 @@ import React from  'react'
 import styled from 'styled-components'
 
 const GameScreen = styled.div`
-  width: 100vw;
-  height: 100vh;
+
 `;
 const GridContainer =styled.div` 
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  background-color: #2196F3;
 `;
 
 const SquareBlock = styled(GridContainer)`
@@ -23,14 +21,18 @@ const SquareBlock = styled(GridContainer)`
 let widthBlocks = ['a','b','c','d','e','f','g','e','f','g']; 
 let heightBlocks = [1,2,3,4,5,6,7,8,9,10];   
 
-let board = ()=>{
+let gameBoard = ()=>{
   return(
     <GameScreen>
       <GridContainer>
-        {heightBlocks.map((items)=> <SquareBlock> {items}</SquareBlock>)}
+        {
+          heightBlocks.map((itemHeight)=> 
+            widthBlocks.map((itemWidth)=> 
+            <SquareBlock> {itemHeight}{itemWidth}</SquareBlock>))
+        }
       </GridContainer>
       
     </GameScreen>
   );
 }
-export default board
+export default gameBoard
