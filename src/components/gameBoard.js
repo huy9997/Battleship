@@ -6,7 +6,7 @@ const GameScreen = styled.div`
 `;
 const GridContainer =styled.div` 
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(9, 1fr);
 `;
 
 const SquareBlock = styled(GridContainer)`

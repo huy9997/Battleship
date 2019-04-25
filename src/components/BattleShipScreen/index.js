@@ -1,6 +1,7 @@
 import React from  'react'
 import styled from 'styled-components'
 import GameBoard from '../gameBoard'
+import PlayController from '../playerController'
 
 const ScreenContainer = styled.div`
   width:100vw;
@@ -26,6 +27,7 @@ let BattleShipScreen = ()=>{
 
         </GameScreen>
         <GameControls>
+          <PlayController></PlayController>
         </GameControls>
       </GeneralScreen>
     </ScreenContainer>
