@@ -2,23 +2,23 @@ import React from  'react'
 import styled from 'styled-components'
 
 const GameScreen = styled.div`
-
+ width:100vw;
+ height:100vh;
 `;
 const GridContainer =styled.div` 
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(10, 1fr);
 `;
 
-const SquareBlock = styled(GridContainer)`
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+const CircleBlock =styled(GridContainer)`
+  height: 40px;
+  width: 40px;
+  background-color: #bbb;
+  border-radius: 50%;
 `;
 
 
-let widthBlocks = ['a','b','c','d','e','f','g','e','f','g']; 
+let widthBlocks = [1,2,3,4,5,6,7,8,9,10]; 
 let heightBlocks = [1,2,3,4,5,6,7,8,9,10];   
 
 let gameBoard = ()=>{
@@ -28,7 +28,7 @@ let gameBoard = ()=>{
         {
           heightBlocks.map((itemHeight)=> 
             widthBlocks.map((itemWidth)=> 
-            <SquareBlock> {itemHeight}{itemWidth}</SquareBlock>))
+            <CircleBlock> {itemHeight}{itemWidth}</CircleBlock>))
         }
       </GridContainer>
       

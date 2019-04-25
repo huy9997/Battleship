@@ -18,13 +18,13 @@ const GameControls = styled(GeneralScreen)`
   flex:2;
 `;
 
-let BattleShipScreen = ()=>{
+let BattleShipScreen = (props)=>{
   return(
     <ScreenContainer>
       <GeneralScreen>
         <GameScreen>
           <GameBoard></GameBoard>
-
+          
         </GameScreen>
         <GameControls>
           <PlayController></PlayController>

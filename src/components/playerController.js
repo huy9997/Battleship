@@ -6,16 +6,17 @@ const PlayerContainer= styled.div`
   flex-direction:row;
 `;
 
-const PlayerControllerContainer = styled(PlayerContainer)`
-  flex:5;
+const Controls = styled(PlayerContainer)`
+  background-color: black;
+  width:100%;
+  height:100%;
 `;
  
 
 let playerController  = ()=>{
   return( 
     <PlayerContainer>
-      <PlayerControllerContainer></PlayerControllerContainer>
-      <PlayerControllerContainer></PlayerControllerContainer>
+      <Controls></Controls>
     </PlayerContainer>
   );
 
